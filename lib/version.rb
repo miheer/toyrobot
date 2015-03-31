@@ -1,3 +1,6 @@
 module ToyRobotVersion
-  VERSION = "1.0.0"
+  MAJOR = '1'
+  MINOR = '0'
+  TINY  = '0'
+  VERSION = [MAJOR, MINOR, TINY].join '.'
 end
