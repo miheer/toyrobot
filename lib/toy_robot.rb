@@ -2,11 +2,11 @@ module ToyRobot
   class Bot  
     attr_accessor :command, :x, :y, :direction
 
-    MAX_X = 5 unless const_defined?(:MAX_X)
-    MAX_Y = 5 unless const_defined?(:MAX_Y)
-    DIRECTIONS = %w(NORTH EAST SOUTH WEST) unless const_defined?(:DIRECTIONS)
-    LEFT = -1 unless const_defined?(:LEFT)
-    RIGHT = 1 unless const_defined?(:RIGHT)
+    MAX_X ||= 5 #unless const_defined?(:MAX_X)
+    MAX_Y ||= 5 #unless const_defined?(:MAX_Y)
+    DIRECTIONS ||= %w(NORTH EAST SOUTH WEST) #unless const_defined?(:DIRECTIONS)
+    LEFT ||= -1 #unless const_defined?(:LEFT)
+    RIGHT ||= 1 #unless const_defined?(:RIGHT)
 
     def initialize(command, x = nil, y = nil, direction = nil)
       @command = command

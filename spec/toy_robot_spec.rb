@@ -1,7 +1,7 @@
 require 'toy_robot'
 describe "check toy robot commands" do
-  LEFT = -1
-  RIGHT = 1
+  LEFT ||= -1
+  RIGHT ||= 1
   describe "if bot is placed facing NORTH direction" do
     before(:each) do
       @toy_robot = ToyRobot::Bot.get_position_and_direction "PLACE","3","2","NORTH"
