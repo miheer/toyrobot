@@ -1,7 +1,7 @@
 require File.expand_path('../lib/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.name          = "bot"
+  gem.name          = 'bot'
   gem.version       = ToyRobotVersion::VERSION
   gem.summary       = %q{A Simple Toy Robot}
   gem.description   = %q{A toy robot which can run on commands on a specified size of a table top}
@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = "miheer.salunke@gmail.com"
   gem.homepage      = "https://rubygems.org/gems/toyrobot"
 
-  gem.files         = `git ls-files`.split($/)
+  gem.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
