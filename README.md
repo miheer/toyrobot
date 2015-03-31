@@ -18,7 +18,7 @@ be allowed.
  - RHEL6.4+ 
 
 ##Application Installation Instructions
-## Using gem
+# Using gem
  
  - git clone 
 
@@ -46,7 +46,7 @@ be allowed.
    $gem install --dev bot-1.0.0.gem 
 ~~~
 
-## Without building and installing a gem
+# Without building and installing a gem
 
 ~~~
   $git clone
