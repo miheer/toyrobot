@@ -59,7 +59,7 @@ be allowed.
 ##Usage Instructions
   You can use 2 modes for feeding instructions to the bot either by file or by manual mode
 
-#### If you have installed a gem then
+#### If you have installed a gem then-
  
   1) To have a bot fetch instructions manually run the following-  
 ~~~
@@ -71,7 +71,7 @@ be allowed.
    $bot file <filename>  
 ~~~
 
-#### If you have not installed a gem then
+#### If you have not installed a gem then-
 
 ~~~
     $cd toyrobot
