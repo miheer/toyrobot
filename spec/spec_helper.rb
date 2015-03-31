@@ -1,3 +1,6 @@
+['lib', 'spec'].each do |folder|
+    $LOAD_PATH.unshift File.dirname(__FILE__) + folder 
+end
 $0 = "/bin/bot"
 ARGV.clear
 

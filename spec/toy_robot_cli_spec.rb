@@ -1,6 +1,5 @@
-$LOAD_PATH.unshift File.dirname(__FILE__) + '/../'
-require 'lib/toy_robot_cli'
-require 'spec/spec_helper'
+require 'spec_helper'
+require 'toy_robot_cli'
 
 describe ToyRobotCli do
 
