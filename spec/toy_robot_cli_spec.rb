@@ -22,4 +22,16 @@ describe ToyRobotCli do
       File.delete("test.txt")
     end
   end
+
+  describe "Help" do
+    let(:help)   do
+      ToyRobotCli::BotCli.start(["help"])
+    end
+
+    it "shall return a position of the bot calculated from the instructions mentioned in the file" do
+      results = capture(:stdout) { help }
+      expect(results).to eql("******* toy_robot mode help***********\nTo use file mode run bot file <file> \nTo use manual mode run bot manual \n*********************************\n")
+    end
+
+  end
 end 
