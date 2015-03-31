@@ -17,7 +17,7 @@ module ToyRobot
 
     def self.get_position_and_direction(command = nil, x = nil, y = nil, direction = nil)
       case command
-      when "PLACE"
+      when 'PLACE'
         if self.check_feasibility x.to_i , y.to_i
           @toy_robot = Bot.new(command, x, y, direction) if x && y
         end 
@@ -58,13 +58,13 @@ module ToyRobot
     def self.move 
       if @toy_robot
         case @toy_robot.direction
-        when "WEST"
+        when 'WEST'
           @toy_robot.x = (@toy_robot.x.to_i - 1).to_s if self.check_feasibility(@toy_robot.x.to_i - 1, @toy_robot.y.to_i)
-        when "EAST"
+        when 'EAST'
           @toy_robot.x = (@toy_robot.x.to_i + 1).to_s if self.check_feasibility(@toy_robot.x.to_i + 1, @toy_robot.y.to_i)
-        when "NORTH"
+        when 'NORTH'
           @toy_robot.y = (@toy_robot.y.to_i + 1).to_s if self.check_feasibility(@toy_robot.x.to_i, @toy_robot.y.to_i + 1)
-        when "SOUTH"
+        when 'SOUTH'
           @toy_robot.y = (@toy_robot.y.to_i - 1).to_s if self.check_feasibility(@toy_robot.x.to_i, @toy_robot.y.to_i - 1)
         end
       end

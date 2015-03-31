@@ -4,7 +4,7 @@ module ToyRobotCliHelper
     def self.get_instruction_manually(command_execute_block)
       while command = STDIN.gets
         command_execute_block.call(command)
-        print ">>"
+        print '>>'
       end
     end
 
