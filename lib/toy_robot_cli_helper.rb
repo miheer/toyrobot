@@ -9,13 +9,13 @@ module ToyRobotCliHelper
     end
 
     def self.get_file_instructions(command_execute_block, file)
-      begin
+      #begin
         File.readlines(file).map do |command|
           command_execute_block.call(command.strip.chomp) unless command.strip.chomp.empty?
         end
-      rescue
-        puts "File not given or doesn't exists"
-      end
+      #rescue
+        #puts "File not given or doesn't exists"
+      #end
     end
 
   end

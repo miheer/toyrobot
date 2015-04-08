@@ -20,21 +20,21 @@ describe "check toy robot commands" do
     end
 
     it "should turn left by 90 degrees to west and the postion should be the same" do  
-      ToyRobot::Bot.turn LEFT
+      @toy_robot.turn LEFT
       expect(@toy_robot.x).to eq("3")
       expect(@toy_robot.y).to eq("2")
       expect(@toy_robot.direction).to eq("WEST")
     end
 
     it "should turn right by 90 degrees to east and the postion should be the same" do
-      ToyRobot::Bot.turn RIGHT
+      @toy_robot.turn RIGHT
       expect(@toy_robot.x).to eq("3")
       expect(@toy_robot.y).to eq("2")
       expect(@toy_robot.direction).to eq("EAST")
     end
 
     it "should report position of the bot" do
-      expect(ToyRobot::Bot.report).to eq("3,2,NORTH")
+      expect(@toy_robot.report).to eq("3,2,NORTH")
     end
   end
 
@@ -57,21 +57,21 @@ describe "check toy robot commands" do
     end
 
     it "should turn left by 90 degrees to east and the postion should be the same" do 
-      ToyRobot::Bot.turn LEFT
+      @toy_robot.turn LEFT
       expect(@toy_robot.x).to eq("3")
       expect(@toy_robot.y).to eq("2")
       expect(@toy_robot.direction).to eq("EAST")
     end
 
     it "should turn right by 90 degrees to west and the postion should be the same" do
-      ToyRobot::Bot.turn RIGHT
+      @toy_robot.turn RIGHT
       expect(@toy_robot.x).to eq("3")
       expect(@toy_robot.y).to eq("2")
       expect(@toy_robot.direction).to eq("WEST")
     end
 
     it "should report position of the bot" do
-      expect(ToyRobot::Bot.report).to eq("3,2,SOUTH")
+      expect(@toy_robot.report).to eq("3,2,SOUTH")
     end
   end
 
@@ -88,28 +88,30 @@ describe "check toy robot commands" do
     end
 
     it "it should move the bot in the WEST direction by 1 step " do
-      ToyRobot::Bot.get_position_and_direction "MOVE"
+      t=ToyRobot::Bot.get_position_and_direction "MOVE"
       expect(@toy_robot.x).to eq("2")
+      #expect(t.instance_variable_get(:@x)).to eql("2")
+      #assigns(:x).should_not be_nil
       expect(@toy_robot.y).to eq("2")
       expect(@toy_robot.direction).to eq("WEST")
     end
 
     it "should turn left by 90 degrees to SOUTH and the postion should be the same" do 
-      ToyRobot::Bot.turn LEFT
+      @toy_robot.turn LEFT
       expect(@toy_robot.x).to eq("3")
       expect(@toy_robot.y).to eq("2")
       expect(@toy_robot.direction).to eq("SOUTH")
     end
 
     it "should turn right by 90 degrees to NORTH and the postion should be the same" do
-      ToyRobot::Bot.turn RIGHT
+      @toy_robot.turn RIGHT
       expect(@toy_robot.x).to eq("3")
       expect(@toy_robot.y).to eq("2")
       expect(@toy_robot.direction).to eq("NORTH")
     end
 
     it "should report position of the bot" do
-      expect(ToyRobot::Bot.report).to eq("3,2,WEST")
+      expect(@toy_robot.report).to eq("3,2,WEST")
     end
   end
 
@@ -133,21 +135,21 @@ describe "check toy robot commands" do
     end
 
     it "should turn left by 90 degrees to NORTH and the postion should be the same" do 
-      ToyRobot::Bot.turn LEFT
+      @toy_robot.turn LEFT
       expect(@toy_robot.x).to eq("3")
       expect(@toy_robot.y).to eq("2")
       expect(@toy_robot.direction).to eq("NORTH")
     end
 
     it "should turn right by 90 degrees to SOUTH and the postion should be the same" do
-      ToyRobot::Bot.turn RIGHT
+      @toy_robot.turn RIGHT
       expect(@toy_robot.x).to eq("3")
       expect(@toy_robot.y).to eq("2")
       expect(@toy_robot.direction).to eq("SOUTH")
     end
 
     it "should report position of the bot" do
-      expect(ToyRobot::Bot.report).to eq("3,2,EAST")
+      expect(@toy_robot.report).to eq("3,2,EAST")
     end
   end
 
