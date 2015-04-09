@@ -30,7 +30,6 @@ module ToyRobot
       when 'RIGHT'
         @toy_robot.turn RIGHT if @toy_robot #and @x and @y and @direction
       when 'REPORT'
-        puts "report"
         puts @toy_robot.report if @toy_robot #and @x and @y and @direction
       end
     end
@@ -56,7 +55,7 @@ module ToyRobot
       when 'SOUTH'
         @y = (@y.to_i - 1).to_s  if ToyRobot::Bot.check_feasibility(@x.to_i, @y.to_i - 1)
       else
-        nothing
+        #do nothing
       end
     end
 
